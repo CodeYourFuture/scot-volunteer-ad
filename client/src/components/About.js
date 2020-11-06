@@ -1,7 +1,5 @@
 import React from "react";
 
-var name = "das";
-
 const About = () => {
   return (
     <div>
