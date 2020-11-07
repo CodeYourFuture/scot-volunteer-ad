@@ -6,10 +6,10 @@ const Status = () => {
   const [users, setUsers] = useState([]);
 
   useEffect(() => {
-    getStatus().then(response => {
+    getStatus().then((response) => {
       setStatus(response);
     });
-    getUsers().then(response => {
+    getUsers().then((response) => {
       setUsers(response);
     });
   }, []);
@@ -22,7 +22,7 @@ const Status = () => {
           <p>No users</p>
         ) : (
           <ul>
-            {users.map(user => (
+            {users.map((user) => (
               <li key={user.id}>user: {user.email}</li>
             ))}
           </ul>
