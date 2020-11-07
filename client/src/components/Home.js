@@ -5,7 +5,8 @@ const Home = () => {
   return (
     <div>
       <header className="home-header">
-        <h1>Volunteer assessment Project</h1>
+        <h1>Volunteer Assessment Project</h1>
+        <p> This is the Home page for our web app.</p>
       </header>
     </div>
   );
