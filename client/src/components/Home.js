@@ -6,6 +6,7 @@ const Home = () => {
     <div>
       <header className="home-header">
         <h1>Volunteer assessment Project</h1>
+        <p> This is the Home page</p>
       </header>
     </div>
   );
