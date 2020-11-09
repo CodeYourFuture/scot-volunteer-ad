@@ -1,0 +1,14 @@
+.footer {
+  height: 100px;
+}
+p {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  height: 90px;
+  background-color: #fd793c;
+  padding-top: 50px;
+  padding-left: 15px;
+  color: rgb(5, 5, 5);
+  font-size: large;
+  font-style: inherit;
+  font-weight: bolder;
+}

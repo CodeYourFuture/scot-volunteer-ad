@@ -6,3 +6,26 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+.nav-link {
+  background-color: #ff7a3dfd;
+  color: white;
+}
+.nav-btn {
+  height: 100%;
+  width: 90px;
+  border: rgba(241, 141, 83, 0.596) solid 1px;
+  background-color: #ff7a3dfd;
+}
+.logo-img {
+  height: 130px;
+  position: absolute;
+  left: 1px;
+  top: 0px;
+  border-radius: 2%;
+}
+.btns {
+  background-color: #ff7a3dfd;
+  height: 130px;
+  position: relative;
+  left: 23px;
+}
