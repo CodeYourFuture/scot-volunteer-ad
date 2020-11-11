@@ -7,39 +7,67 @@ import Status from "./components/Status";
 import Footer from "./components/Footer";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import { AppBar, Toolbar } from "@material-ui/core";
-import Button from "@material-ui/core/Button";
+import Menu from "@material-ui/core/Menu";
+import MenuItem from "@material-ui/core/MenuItem";
+import MenuIcon from "@material-ui/icons/Menu";
 
 const Routes = () => {
+  const [anchorEl, setAnchorEl] = React.useState(null);
+
+  const handleClick = event => {
+    setAnchorEl(event.currentTarget);
+  };
+
+  const handleClose = () => {
+    setAnchorEl(null);
+  };
+
   return (
     <Router>
       <div className="App">
         <AppBar
           position="sticky"
-          style={{ height: "130px", backgroundColor: "#ff7a3dfd" }}
+          style={{ height: "70px", backgroundColor: "white" }}
         >
           <Toolbar style={{ display: "flex", justifyContent: "flex-end" }}>
+            <div>
+              <MenuIcon
+                className="menuicon"
+                aria-controls="simple-menu"
+                aria-haspopup="true"
+                onClick={handleClick}
+              ></MenuIcon>
+              <Menu
+                id="simple-menu"
+                anchorEl={anchorEl}
+                keepMounted
+                open={Boolean(anchorEl)}
+                onClose={handleClose}
+              >
+                <MenuItem onClick={handleClose}>
+                  {" "}
+                  <Link className="nav-link" to="/">
+                    Home
+                  </Link>
+                </MenuItem>
+                <MenuItem onClick={handleClose}>
+                  <Link className="nav-link" to="/about">
+                    About
+                  </Link>
+                </MenuItem>
+                <MenuItem onClick={handleClose}>
+                  {" "}
+                  <Link className="nav-link" to="/status">
+                    Status
+                  </Link>
+                </MenuItem>
+              </Menu>
+            </div>
             <img
               className="logo-img"
               src="https://refmentors.org.uk/wp-content/uploads/2019/12/cropped-thumbnail_FB_cover-image_amend-final-Copy.jpg"
               alt="RefMentors icon"
             />
-            <div className="btns">
-              <Button class="nav-btn">
-                <Link className="nav-link" to="/">
-                  Home
-                </Link>
-              </Button>
-              <Button class="nav-btn">
-                <Link className="nav-link" to="/about">
-                  About
-                </Link>
-              </Button>
-              <Button class="nav-btn">
-                <Link className="nav-link" to="/status">
-                  Status
-                </Link>
-              </Button>
-            </div>
           </Toolbar>
         </AppBar>
         <div>
