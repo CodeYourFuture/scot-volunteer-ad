@@ -1,13 +1,8 @@
 import React from "react";
 import "../styles/Home.css";
-import TabsBar from "./TabsBar";
 
 const Home = () => {
-  return (
-    <div className="container">
-      <TabsBar />
-    </div>
-  );
+  return <div className="container">RefMentors</div>;
 };
 
 export default Home;

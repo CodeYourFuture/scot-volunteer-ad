@@ -6,17 +6,3 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-.nav-link {
-  background-color: white;
-  color: #ff7a3dfd;
-}
-.logo-img {
-  height: 60px;
-  position: absolute;
-  left: 1px;
-  top: 4px;
-  border-radius: 20%;
-}
-.menuicon {
-  color: #ff7a3dfd;
-}

@@ -36,6 +36,7 @@ const Routes = () => {
                 aria-controls="simple-menu"
                 aria-haspopup="true"
                 onClick={handleClick}
+                style={{ color: "#ff7a3dfd" }}
               ></MenuIcon>
               <Menu
                 id="simple-menu"
@@ -46,24 +47,43 @@ const Routes = () => {
               >
                 <MenuItem onClick={handleClose}>
                   {" "}
-                  <Link className="nav-link" to="/">
+                  <Link
+                    className="nav-link"
+                    style={{ color: "#ff7a3dfd", backgroundColor: "white" }}
+                    to="/"
+                  >
                     Home
                   </Link>
                 </MenuItem>
                 <MenuItem onClick={handleClose}>
-                  <Link className="nav-link" to="/about">
+                  <Link
+                    className="nav-link"
+                    style={{ color: "#ff7a3dfd", backgroundColor: "white" }}
+                    to="/about"
+                  >
                     About
                   </Link>
                 </MenuItem>
                 <MenuItem onClick={handleClose}>
                   {" "}
-                  <Link className="nav-link" to="/status">
+                  <Link
+                    className="nav-link"
+                    style={{ color: "#ff7a3dfd", backgroundColor: "white" }}
+                    to="/status"
+                  >
                     Status
                   </Link>
                 </MenuItem>
               </Menu>
             </div>
             <img
+              style={{
+                height: "60px",
+                position: "absolute",
+                left: "1px",
+                top: "4px",
+                borderRadius: "20%"
+              }}
               className="logo-img"
               src="https://refmentors.org.uk/wp-content/uploads/2019/12/cropped-thumbnail_FB_cover-image_amend-final-Copy.jpg"
               alt="RefMentors icon"
