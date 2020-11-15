@@ -2,7 +2,7 @@ import React from "react";
 import "../styles/Home.css";
 
 const Home = () => {
-  return <div className="container">RefMentors</div>;
+  return <div>Welcome home</div>;
 };
 
 export default Home;

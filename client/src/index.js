@@ -5,6 +5,7 @@ import Home from "./components/Home";
 import About from "./components/About";
 import Status from "./components/Status";
 import Footer from "./components/Footer";
+import Login from "./components/Login";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import { AppBar, Toolbar } from "@material-ui/core";
 import Menu from "@material-ui/core/Menu";
@@ -94,7 +95,9 @@ const Routes = () => {
           <Route path="/" exact component={Home} />
           <Route path="/about/" component={About} />
           <Route path="/status/" component={Status} />
+          <Route path="/Login/" component={Login} />
         </div>
+
         <Footer />
       </div>
     </Router>

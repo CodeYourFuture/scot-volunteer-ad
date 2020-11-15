@@ -1,12 +1,13 @@
 .footer {
-  height: 60px;
+  height: 30px;
 }
 p {
   font-family: Georgia, "Times New Roman", Times, serif;
-  height: 90px;
+  height: 30px;
   background-color: white;
-
+  margin-top: 30px;
+  margin-left: 20px;
   color: rgb(3, 3, 3);
-  font-size: medium;
+  font-size: small;
   font-style: inherit;
 }
