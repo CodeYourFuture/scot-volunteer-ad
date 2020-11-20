@@ -4,31 +4,25 @@ const pool = new Pool(config);
 
 
 const getAllAssessments = () => {
-    return pool.query("select * from assessments")
-    .then((result) => result.rows);
+	return pool.query("select * from assessments")
+		.then((result) => result.rows);
 };
 
-const getAssessmentById=(id)=> {
+const getAssessmentById= (id) => {
+	return pool
+		.query("SELECT * FROM assessments WHERE assessment_id=$1", [id])
+		.then((result) => result.rows[0]);
+};
 
-   return pool
-    .query("SELECT * FROM assessments WHERE assessment_id=$1", [id])
-    .then((result) => result.rows[0]);
-    
-   
-}
-const createNewAssessment=( topicId, newAssessment)=> {
- 
-  const query = "INSERT INTO assessments (topic_id, assessment_name) VALUES ($1,$2)";
-    
-    return pool
-        .query(query, [ topicId, newAssessment ])
-        
-    
-            };
+const createNewAssessment= (topicId, newAssessment) => {
+	const query = "INSERT INTO assessments (topic_id, assessment_name) VALUES ($1,$2)";
+	return pool
+		.query(query, [topicId, newAssessment]);
+};
 
-  
+
 module.exports = {
-    getAllAssessments,
-    getAssessmentById,
-    createNewAssessment,
+	getAllAssessments,
+	getAssessmentById,
+	createNewAssessment,
 };
