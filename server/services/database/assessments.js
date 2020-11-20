@@ -22,13 +22,18 @@ const createNewAssessment=( topicId, newAssessment)=> {
     
     return pool
         .query(query, [ topicId, newAssessment ])
-        
-    
             };
 
+            const getAllQuestions = (id) => {
+                
+                return pool.query("select * from questions where assessment_id = $1" ,[id])
+                .then((result) => result.rows);
+            };
+            
   
 module.exports = {
     getAllAssessments,
     getAssessmentById,
     createNewAssessment,
-};
+    getAllQuestions };
+

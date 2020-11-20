@@ -44,4 +44,16 @@ router.post("/create", function(req, res) {
     });
             });
 
+router.get("/:assessment_id/questions", (req, res) => {
+    const id = req.params.assessment_id 
+	assessmentDb
+		.getAllQuestions(id)
+		.then((data) => {
+			res.json(data);
+		})
+		.catch((err) => {
+			console.error(err);
+			res.json(500);
+		});
+    })
 module.exports = router;
