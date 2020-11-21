@@ -16,8 +16,14 @@ const getAssessmentById=(id)=> {
     
    
 }
+
+const getAllQuestions = () => {
+    return pool.query("select * from questions")
+    .then((result) => result.rows);
+};
   ;
 module.exports = {
     getAllAssessments,
     getAssessmentById,
+    getAllQuestions,
 };

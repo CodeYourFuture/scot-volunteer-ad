@@ -29,5 +29,15 @@ router.get("/:assessment_id", passport.authenticate("jwt", { session: false }),(
 
 });
 
-
+//router.get("/:assessment_id/questions", (req, res) => {
+//	assessmentDb
+//		.getAllQuestions()
+//		.then((data) => {
+//			res.json(data);
+//		})
+//		.catch((err) => {
+//			console.error(err);
+//			res.json(500);
+//		});
+//    })
 module.exports = router;
