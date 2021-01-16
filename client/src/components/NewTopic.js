@@ -33,21 +33,21 @@ function NewTopic() {
         document_link: newTopic.documentLink
       })
     })
-      .then(response => response.json())
-      .then(data => {
-        if (data.error) {
-          throw new Error(data.error);
-        }
+      .then(response => {
+        return response.json();
+      })
+      .then(() => {
+        setNewTopic({
+          topicName: "",
+          documentName: "",
+          documentLink: ""
+        });
+        history.push("/topics");
+      })
+      .catch(e => {
+        console.log(e.message);
+        throw new Error(e);
       });
-
-    history.push("/topics");
-
-    setNewTopic({
-      topicName: "",
-      documentName: "",
-      documentLink: ""
-    });
-    window.location = "/topics";
   };
 
   return (
