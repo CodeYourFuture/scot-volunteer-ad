@@ -34,19 +34,18 @@ function NewTopic() {
     })
       .then(response => response.json())
       .then(data => {
-        if (data.error) {
-          throw new Error(data.error);
-        }
+        console.log({ data });
+        history.push("/topics");
+      })
+      .catch(e => {
+        console.log("error", e.message);
       });
-
-    history.push("/topics");
 
     setNewTopic({
       topicName: "",
       documentName: "",
       documentLink: ""
     });
-    window.location = "/topics";
   };
 
   return (

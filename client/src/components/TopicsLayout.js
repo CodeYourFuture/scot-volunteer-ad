@@ -20,7 +20,7 @@ const TopicsLayout = () => {
 
   return (
     <div>
-      <Cards setData={setApi} data={api} getAllData={getAllData()} />
+      <Cards setData={setApi} data={api} getAllData={() => getAllData()} />
     </div>
   );
 };
